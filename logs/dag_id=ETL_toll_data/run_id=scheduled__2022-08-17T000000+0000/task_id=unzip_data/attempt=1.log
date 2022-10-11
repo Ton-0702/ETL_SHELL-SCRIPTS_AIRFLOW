@@ -1,0 +1,34 @@
+[2022-08-20 14:33:28,732] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: ETL_toll_data.unzip_data scheduled__2022-08-17T00:00:00+00:00 [queued]>
+[2022-08-20 14:33:28,748] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: ETL_toll_data.unzip_data scheduled__2022-08-17T00:00:00+00:00 [queued]>
+[2022-08-20 14:33:28,748] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-20 14:33:28,748] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2022-08-20 14:33:28,749] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-20 14:33:28,768] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): unzip_data> on 2022-08-17 00:00:00+00:00
+[2022-08-20 14:33:28,773] {standard_task_runner.py:52} INFO - Started process 970 to run task
+[2022-08-20 14:33:28,777] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_toll_data', 'unzip_data', 'scheduled__2022-08-17T00:00:00+00:00', '--job-id', '103', '--raw', '--subdir', 'DAGS_FOLDER/final/final.py', '--cfg-path', '/tmp/tmplyhgpxlt', '--error-file', '/tmp/tmprggc_tu8']
+[2022-08-20 14:33:28,778] {standard_task_runner.py:80} INFO - Job 103: Subtask unzip_data
+[2022-08-20 14:33:28,934] {task_command.py:371} INFO - Running <TaskInstance: ETL_toll_data.unzip_data scheduled__2022-08-17T00:00:00+00:00 [running]> on host d96844587567
+[2022-08-20 14:33:29,104] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=19447.iuh@gmail.com
+AIRFLOW_CTX_DAG_OWNER=Ton
+AIRFLOW_CTX_DAG_ID=ETL_toll_data
+AIRFLOW_CTX_TASK_ID=unzip_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-17T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-17T00:00:00+00:00
+[2022-08-20 14:33:29,105] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-08-20 14:33:29,106] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'tar -xzvf /opt/***/dags/final/tolldata.tgz -C /opt/***/dags/final/staging']
+[2022-08-20 14:33:29,118] {subprocess.py:85} INFO - Output:
+[2022-08-20 14:33:29,129] {subprocess.py:92} INFO - fileformats.txt
+[2022-08-20 14:33:29,129] {subprocess.py:92} INFO - payment-data.txt
+[2022-08-20 14:33:29,131] {subprocess.py:92} INFO - ._tollplaza-data.tsv
+[2022-08-20 14:33:29,132] {subprocess.py:92} INFO - tollplaza-data.tsv
+[2022-08-20 14:33:29,141] {subprocess.py:92} INFO - ._vehicle-data.csv
+[2022-08-20 14:33:29,141] {subprocess.py:92} INFO - vehicle-data.csv
+[2022-08-20 14:33:29,151] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-08-20 14:33:29,213] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=ETL_toll_data, task_id=unzip_data, execution_date=20220817T000000, start_date=20220820T143328, end_date=20220820T143329
+[2022-08-20 14:33:29,277] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-20 14:33:29,324] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
